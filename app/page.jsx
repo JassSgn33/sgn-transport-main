@@ -89,10 +89,27 @@ export default function Page() {
               <p className="mt-4 text-neutral-600 text-lg">
                 Tri‑axle specialists delivering on‑time loads for subdivisions, roadworks, and municipal projects across Peel, Halton, Durham, and the GTA.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a href="#order" className="btn btn-primary flex items-center">Order Trucks <ChevronRight className="ml-1 h-4 w-4" /></a>
-                <a href="#services" className="btn btn-outline">Our Services</a>
+                            <div className="mt-6 flex flex-wrap gap-3">
+                {/* Order Trucks button */}
+                <button
+                  type="button"
+                  onClick={() => handleScroll("order")}
+                  className="btn btn-primary flex items-center"
+                >
+                  Order Trucks
+                  <ChevronRight className="ml-1 h-4 w-4" />
+                </button>
+
+                {/* Our Services button */}
+                <button
+                  type="button"
+                  onClick={() => handleScroll("services")}
+                  className="btn btn-outline"
+                >
+                  Our Services
+                </button>
               </div>
+
               <div className="mt-6 flex flex-wrap gap-6 text-sm text-neutral-600">
                 <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4"/> CVOR • WSIB • Insured</span>
                 <span className="flex items-center gap-2"><Clock className="h-4 w-4"/> {BUSINESS.hours}</span>
