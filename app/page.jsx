@@ -125,8 +125,7 @@ export default function Page() {
               <div className="text-xs uppercase tracking-wider text-neutral-500">Trusted on projects like</div>
               <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                 {logos.map(l => <div key={l} className="rounded-xl border bg-white px-4 py-3 text-center text-sm text-neutral-600">{l}</div>)}
-              </div>
-            </div>
+              
           </FadeIn>
         </div>
       </section>
