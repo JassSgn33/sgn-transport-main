@@ -70,38 +70,55 @@ export default function Page() {
         </div>
       </header>
 
-      {/* Hero */}
+            {/* Hero */}
       <section id="home" className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,0,0,0.06),transparent_60%)]" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        {/* background glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,0,0,0.06),transparent_60%)] pointer-events-none" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-           <FadeIn>
-  <h1 className="text-4xl md:text-5xl font-bold leading-tight">{BUSINESS.tagline}</h1>
+            {/* Left column: text + buttons + stats */}
+            <div>
+              <FadeIn>
+                <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                  {BUSINESS.tagline}
+                </h1>
+                <p className="mt-4 text-neutral-600 text-lg">
+                  Tri-axle specialists delivering on-time loads for subdivisions,
+                  roadworks, and municipal projects across Peel, Halton, Durham,
+                  and the GTA.
+                </p>
+              </FadeIn>
 
-  <p className="mt-4 text-neutral-600 text-lg">
-    Tri-axle specialists delivering on-time loads for subdivisions, roadworks, and municipal projects across Peel, Halton, Durham, and the GTA.
-  </p>
-</FadeIn>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="#order" className="btn btn-primary flex items-center">
+                  Order Trucks
+                  <ChevronRight className="ml-1 h-4 w-4" />
+                </a>
 
-<div className="mt-6 flex flex-wrap gap-3">
-  {/* Order Trucks button */}
-  <a href="#order" className="btn btn-primary flex items-center">
-    Order Trucks
-    <ChevronRight className="ml-1 h-4 w-4" />
-  </a>
+                <a href="#services" className="btn btn-outline">
+                  Our Services
+                </a>
+              </div>
 
-  {/* Our Services button */}
-  <a href="#services" className="btn btn-outline">
-    Our Services
-  </a>
-</div>
+              <div className="mt-6 flex flex-wrap gap-6 text-sm text-neutral-600">
+                <span className="flex items-center gap-2">
+                  <ShieldCheck className="h-4 w-4" />
+                  CVOR • WSIB • Insured
+                </span>
+                <span className="flex items-center gap-2">
+                  <Clock className="h-4 w-4" />
+                  Mon–Sat 6:00am–7:00pm
+                </span>
+                <span className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4" />
+                  {BUSINESS.address}
+                </span>
+              </div>
+            </div>
 
-<div className="mt-6 flex flex-wrap gap-6 text-sm text-neutral-600">
-  <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" />CVOR • WSIB • Insured</span>
-  <span className="flex items-center gap-2"><Clock className="h-4 w-4" />Mon–Sat 6:00am–7:00pm</span>
-  <span className="flex items-center gap-2"><MapPin className="h-4 w-4" />{BUSINESS.address}</span>
-</div>
-
+            {/* Right column: truck card */}
+            <FadeIn delay={0.1}>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="aspect-[16/10] bg-gradient-to-br from-neutral-200 to-neutral-300 grid place-items-center">
                   <Truck className="h-24 w-24 opacity-60" />
@@ -109,9 +126,28 @@ export default function Page() {
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="backdrop-blur bg-white/80 rounded-2xl p-4 shadow">
                     <div className="flex flex-wrap items-center justify-between gap-3 text-sm">
-                      <div className="flex items-center gap-2"><Phone className="h-4 w-4"/><a href={`tel:${BUSINESS.phone}`} className="hover:underline">{BUSINESS.phone}</a></div>
-                      <div className="flex items-center gap-2"><Mail className="h-4 w-4"/><a href={`mailto:${BUSINESS.email}`} className="hover:underline">{BUSINESS.email}</a></div>
-                      <a className="inline-flex items-center gap-1 text-neutral-800 hover:underline" href="#order">Book a truck <ChevronRight className="h-4 w-4"/></a>
+                      <div className="flex items-center gap-2">
+                        <Phone className="h-4 w-4" />
+                        <a href={`tel:${BUSINESS.phone}`} className="hover:underline">
+                          {BUSINESS.phone}
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Mail className="h-4 w-4" />
+                        <a
+                          href={`mailto:${BUSINESS.email}`}
+                          className="hover:underline"
+                        >
+                          {BUSINESS.email}
+                        </a>
+                      </div>
+                      <a
+                        className="inline-flex items-center gap-1 text-neutral-800 hover:underline"
+                        href="#order"
+                      >
+                        Book a truck
+                        <ChevronRight className="h-4 w-4" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -122,15 +158,26 @@ export default function Page() {
           {/* Trusted by */}
           <FadeIn delay={0.2}>
             <div className="mt-12">
-              <div className="text-xs uppercase tracking-wider text-neutral-500">Trusted on projects like</div>
+              <div className="text-xs uppercase tracking-wider text-neutral-500">
+                Trusted on projects like
+              </div>
               <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-                {logos.map(l => <div key={l} className="rounded-xl border bg-white px-4 py-3 text-center text-sm text-neutral-600">{l}</div>)}
-              
+                {logos.map((l) => (
+                  <div
+                    key={l}
+                    className="rounded-xl border bg-white px-4 py-3 text-center text-sm text-neutral-600"
+                  >
+                    {l}
+                  </div>
+                ))}
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>
 
       {/* Services */}
+
       <section id="services" className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
