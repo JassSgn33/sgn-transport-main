@@ -75,38 +75,33 @@ export default function Page() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,0,0,0.06),transparent_60%)]" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">{BUSINESS.tagline}</h1>
-              <p className="mt-4 text-neutral-600 text-lg">
-                Tri‑axle specialists delivering on‑time loads for subdivisions, roadworks, and municipal projects across Peel, Halton, Durham, and the GTA.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
+           <FadeIn>
+  <h1 className="text-4xl md:text-5xl font-bold leading-tight">{BUSINESS.tagline}</h1>
+
+  <p className="mt-4 text-neutral-600 text-lg">
+    Tri-axle specialists delivering on-time loads for subdivisions, roadworks, and municipal projects across Peel, Halton, Durham, and the GTA.
+  </p>
+</FadeIn>
+
+<div className="mt-6 flex flex-wrap gap-3">
   {/* Order Trucks button */}
-<a
-  href="#order"
-  className="btn btn-primary flex items-center"
->
-  Order Trucks
-  <ChevronRight className="ml-1 h-4 w-4" />
-</a>
+  <a href="#order" className="btn btn-primary flex items-center">
+    Order Trucks
+    <ChevronRight className="ml-1 h-4 w-4" />
+  </a>
 
-{/* Our Services button */}
-<a
-  href="#services"
-  className="btn btn-outline"
->
-  Our Services
-</a>
-
+  {/* Our Services button */}
+  <a href="#services" className="btn btn-outline">
+    Our Services
+  </a>
 </div>
 
-              <div className="mt-6 flex flex-wrap gap-6 text-sm text-neutral-600">
-                <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4"/> CVOR • WSIB • Insured</span>
-                <span className="flex items-center gap-2"><Clock className="h-4 w-4"/> {BUSINESS.hours}</span>
-                <span className="flex items-center gap-2"><MapPin className="h-4 w-4"/> {BUSINESS.address}</span>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.1}>
+<div className="mt-6 flex flex-wrap gap-6 text-sm text-neutral-600">
+  <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" />CVOR • WSIB • Insured</span>
+  <span className="flex items-center gap-2"><Clock className="h-4 w-4" />Mon–Sat 6:00am–7:00pm</span>
+  <span className="flex items-center gap-2"><MapPin className="h-4 w-4" />{BUSINESS.address}</span>
+</div>
+
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="aspect-[16/10] bg-gradient-to-br from-neutral-200 to-neutral-300 grid place-items-center">
                   <Truck className="h-24 w-24 opacity-60" />
