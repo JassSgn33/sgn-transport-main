@@ -47,8 +47,17 @@ const FadeIn = ({ children, delay = 0 }) => (
 );
 
 export default function Page() {
+  const handleScroll = (id: string) => {
+    if (typeof document === "undefined") return;
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
+
       {/* Header */}
       <header className="sticky top-0 z-40 backdrop-blur bg-white/80 border-b">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
