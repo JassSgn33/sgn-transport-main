@@ -10,7 +10,7 @@ const BUSINESS = {
   email: "Sgntransport94@gmail.com",
   address: "273 Glidden Rd, Brampton, ON",
   hours: "Mon–Sat 6:00am–7:00pm",
-  social: { instagram: "https://instagram.com/sgntransport" }
+  social: { instagram: "https://instagram.com/sgntransportinc" }
 };
 
 const NAV = [
@@ -57,7 +57,7 @@ export default function Page() {
               <img src="/sgn-logo.jpg" alt="SGN Logo" className="h-12 w-auto rounded-md shadow-sm bg-white p-1"/>
               <div className="leading-tight">
                 <div className="font-semibold">{BUSINESS.name}</div>
-                <div className="text-xs text-neutral-500">Since 2020 • Brampton, ON</div>
+                <div className="text-xs text-neutral-500">Since 2004 • Brampton, ON</div>
               </div>
             </a>
             <nav className="hidden md:flex gap-6 text-sm">
