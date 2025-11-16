@@ -82,23 +82,22 @@ export default function Page() {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
   {/* Order Trucks button */}
-  <button
-    type="button"
-    onClick={() => handleScroll("order")}
-    className="btn btn-primary flex items-center"
-  >
-    Order Trucks
-    <ChevronRight className="ml-1 h-4 w-4" />
-  </button>
+<a
+  href="#order"
+  className="btn btn-primary flex items-center"
+>
+  Order Trucks
+  <ChevronRight className="ml-1 h-4 w-4" />
+</a>
 
-  {/* Our Services button */}
-  <button
-    type="button"
-    onClick={() => handleScroll("services")}
-    className="btn btn-outline"
-  >
-    Our Services
-  </button>
+{/* Our Services button */}
+<a
+  href="#services"
+  className="btn btn-outline"
+>
+  Our Services
+</a>
+
 </div>
 
               <div className="mt-6 flex flex-wrap gap-6 text-sm text-neutral-600">
