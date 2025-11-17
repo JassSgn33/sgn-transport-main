@@ -130,7 +130,7 @@ export default function Page() {
             {/* RIGHT COLUMN */}
             <FadeIn delay={0.1}>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl">
+                <div className="w-full h-[500px] overflow-hidden rounded-3xl shadow-2xl">
   <img
     src="/hero-truck.jpeg"
     alt="SGN Truck"
