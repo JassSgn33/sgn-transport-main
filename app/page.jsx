@@ -130,9 +130,14 @@ export default function Page() {
             {/* RIGHT COLUMN */}
             <FadeIn delay={0.1}>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <div className="aspect-[16/10] bg-gradient-to-br from-neutral-200 to-neutral-300 grid place-items-center">
-                  <Truck className="h-24 w-24 opacity-60"/>
-                </div>
+                <div className="aspect-[16/10] overflow-hidden rounded-3xl shadow-2xl">
+  <img
+    src="/hero-truck.jpeg"
+    alt="SGN Truck"
+    className="w-full h-full object-cover object-center"
+  />
+</div>
+
 
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="backdrop-blur bg-white/80 rounded-2xl p-4 shadow">
