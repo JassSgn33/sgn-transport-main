@@ -62,7 +62,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <a href="#home" className="flex items-center gap-3">
-              <img src="/sgn-logo.jpg" alt="SGN Logo"
+              <img src="/sgn logo (1).jpg" alt="SGN Logo"
                 className="h-12 w-auto rounded-md shadow-sm bg-white p-1"/>
               <div className="leading-tight">
                 <div className="font-semibold">{BUSINESS.name}</div>
